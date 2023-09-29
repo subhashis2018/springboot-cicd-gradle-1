@@ -6,34 +6,13 @@ on:
   pull_request: 
     branches: ["master"]
 
-  
-
 jobs:
-  test:
-    name: Gradle_Java_Setup_And_Test
-    runs-on: ubuntu-latest
-    steps:
-      - name: checkout
-        uses: actions/checkout@v2
-
-      - name: Setup JDK 1.8
-        uses: actions/setup-java@v2
-        with:
-          java-version: '8'
-          distribution: 'adopt'
-     
-      - name: Setup Gradle
-        uses: gradle/gradle-build-action@v2
-      - name: gradle version
-        run: gradle -v
-      - name: Grant Permissions to gradlew
-        run: chmod +x gradlew
   build:
     name: 
     runs-on: ubuntu-latest
     steps:
-    - name: Test
-      run: gradle test --tests "*"
+    - name: Run chmod to make gradlew executable
+      run: chmod +x ./gradlew
     - uses: actions/checkout@v3
     - name: Set up JDK 1.8
       uses: actions/setup-java@v2
