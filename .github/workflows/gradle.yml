@@ -28,6 +28,8 @@ jobs:
         run: gradle -v
       - name: Grant Permissions to gradlew
         run: chmod +x gradlew
+      - name: Gradle init
+        run: gradle init
   build:
     name: 
     runs-on: ubuntu-latest
