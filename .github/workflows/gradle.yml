@@ -30,8 +30,6 @@ jobs:
         run: chmod +x gradlew
       - name: Gradle init
         run: gradle init
-      - name: echo
-        run: echo "hello"
      
   build:
     name: 
