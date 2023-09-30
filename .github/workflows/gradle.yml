@@ -39,8 +39,7 @@ jobs:
       run: gradle init
     - uses: actions/checkout@v3
     - name: Gtadle build scan
-      run: gradle build --scan
-    - uses: --warning-mode all
+      run: gradle build --scan --warning-mode all
     - name: Set up JDK 1.8
       uses: actions/setup-java@v2
       with:
