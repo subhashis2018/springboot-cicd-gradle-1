@@ -32,7 +32,7 @@ jobs:
         run: gradle init
      
   build:
-    name: 
+    name: Build_Project
     runs-on: ubuntu-latest
     steps:
     - name: Gradle init
